@@ -1,8 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 // Crie um programa que solicite o valor de um produto. Após isso deve ser solicitado a porcentagem de desconto para o produto.
 // Deve ser mostrado o valor com desconto ao final do processo.
 
@@ -20,7 +22,24 @@ namespace Descontao
     {
         public static void Main(string[] args)
         {
-            
+            Console.WriteLine("Digite a senha: ");
+            string senha = "alegriadopovo1";
+
+            string passworld =  Console.ReadLine();
+
+            if (passworld == senha)
+            {
+                Console.WriteLine("A senha é válida.");
+            }
+            else
+            {
+                Console.WriteLine("A senha é inválida.");
+                Console.ReadKey();  
+                System.Environment.Exit(0);
+
+            }
+
+
             Console.WriteLine("Qual é o valor do produto?");
             float valorProduto = float.Parse(Console.ReadLine());
 
